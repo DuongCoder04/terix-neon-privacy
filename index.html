@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Block Game | Chính Sách Bảo Mật</title>
+    <title>Privacy Policy - TetriX Neon | Chính Sách Bảo Mật</title>
     <style>
         * {
             margin: 0;
@@ -136,29 +136,51 @@
             <!-- Vietnamese -->
             <div id="lang-vi" class="section active">
                 <h1>Chính Sách Bảo Mật</h1>
-                <p class="subtitle">Block Game &mdash; DuongCoder04 | Cập nhật: 13/03/2026</p>
+                <p class="subtitle">TetriX Neon &mdash; ThePenguinLab | Cập nhật: 16/07/2026</p>
 
                 <h2>1. Giới thiệu</h2>
                 <p>
-                    Block Game là một trò chơi xếp gạch (Tetris clone) được phát triển bởi DuongCoder04.
+                    TetriX Neon (trước đây là Block Game) là một trò chơi xếp gạch (Tetris clone) được phát triển bởi ThePenguinLab.
                     Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết minh bạch về cách ứng dụng hoạt động.
                 </p>
 
                 <h2>2. Dữ liệu chúng tôi thu thập</h2>
-                <p><strong>Chúng tôi không thu thập bất kỳ dữ liệu cá nhân nào từ người dùng.</strong></p>
+                <p>Ứng dụng không yêu cầu đăng ký tài khoản, email hay số điện thoại. Tuy nhiên, nếu bạn sử dụng các tính năng trực tuyến (bảng xếp hạng), chúng tôi có thu thập một số dữ liệu như mô tả bên dưới.</p>
                 <ul>
-                    <li>Không yêu cầu đăng ký tài khoản hay đăng nhập.</li>
-                    <li>Không thu thập tên, email, số điện thoại hay bất kỳ thông tin cá nhân nào.</li>
+                    <li>Không yêu cầu đăng ký tài khoản hay đăng nhập bằng email/số điện thoại.</li>
+                    <li>Không thu thập email, số điện thoại hay thông tin liên hệ cá nhân.</li>
                     <li>Không theo dõi vị trí của bạn.</li>
+                    <li>Có thu thập <strong>tên hiển thị (display name)</strong> do bạn tự đặt và <strong>điểm số</strong> khi bạn tham gia bảng xếp hạng toàn cầu (xem mục 3).</li>
+                    <li>Có thu thập dữ liệu sử dụng ẩn danh (điểm số, cấp độ, số hàng đã xóa, thời lượng chơi, ngôn ngữ) thông qua Firebase Analytics (xem mục 4).</li>
                 </ul>
 
-                <h2>3. Lưu trữ cục bộ</h2>
+                <h2>3. Bảng xếp hạng toàn cầu (Global Leaderboard)</h2>
                 <p>
-                    Ứng dụng sử dụng <strong>SharedPreferences</strong> để lưu điểm cao (high score) trên thiết bị của bạn.
-                    Dữ liệu này chỉ được lưu trữ trên thiết bị của bạn, không được gửi đi bất cứ đâu, và sẽ bị xóa khi bạn gỡ cài đặt ứng dụng.
+                    Nếu bạn chọn đặt tên hiển thị và gửi điểm lên bảng xếp hạng toàn cầu, ứng dụng sẽ gửi các thông tin sau lên máy chủ Cloud Firestore (Google Firebase):
+                </p>
+                <ul>
+                    <li><strong>Tên hiển thị</strong> do bạn tự nhập (tối đa 20 ký tự) &mdash; tên này sẽ hiển thị công khai cho mọi người chơi khác trên bảng xếp hạng. Vui lòng không dùng tên thật hoặc thông tin định danh cá nhân.</li>
+                    <li><strong>Điểm số cao nhất</strong> của bạn.</li>
+                    <li>Một <strong>mã định danh ẩn danh</strong> (anonymous ID) do Firebase Authentication tạo ra để phân biệt bản ghi của bạn với người chơi khác &mdash; mã này không gắn với tên thật, email hay bất kỳ thông tin cá nhân nào của bạn.</li>
+                </ul>
+                <p>
+                    Tính năng bảng xếp hạng là <strong>tùy chọn</strong> &mdash; bạn có thể bỏ qua và chơi hoàn toàn ngoại tuyến. Bạn có thể đổi tên hiển thị bất cứ lúc nào trong ứng dụng.
+                    Nếu bạn muốn yêu cầu xóa dữ liệu bảng xếp hạng của mình, vui lòng liên hệ email ở mục 8.
                 </p>
 
-                <h2>4. Quảng cáo (Google AdMob)</h2>
+                <h2>4. Firebase Analytics</h2>
+                <p>
+                    Ứng dụng sử dụng Firebase Analytics để ghi nhận số liệu sử dụng ẩn danh, giúp chúng tôi cải thiện trải nghiệm chơi game, ví dụ: điểm số, cấp độ đạt được, số hàng đã xóa, thời lượng ván chơi, màn hình đang xem, và ngôn ngữ đang dùng. Dữ liệu này không bao gồm tên, email hay bất kỳ thông tin định danh cá nhân nào. Tham khảo thêm:
+                    <a href="https://policies.google.com/privacy" target="_blank">Chính sách bảo mật của Google</a>.
+                </p>
+
+                <h2>5. Lưu trữ cục bộ</h2>
+                <p>
+                    Ứng dụng sử dụng <strong>SharedPreferences</strong> để lưu điểm cao, số coin, tiến trình nhiệm vụ và chuỗi điểm danh trên thiết bị của bạn.
+                    Dữ liệu này chỉ được lưu trữ trên thiết bị của bạn, không được gửi đi bất cứ đâu (ngoại trừ dữ liệu bảng xếp hạng ở mục 3 nếu bạn chọn tham gia), và sẽ bị xóa khi bạn gỡ cài đặt ứng dụng.
+                </p>
+
+                <h2>6. Quảng cáo (Google AdMob)</h2>
                 <p>
                     Ứng dụng sử dụng <strong>Google AdMob</strong> để hiển thị quảng cáo. Google AdMob có thể thu thập một số thông tin thiết bị nhằm mục đích hiển thị quảng cáo phù hợp, bao gồm:
                 </p>
@@ -173,55 +195,79 @@
                     <a href="https://policies.google.com/privacy" target="_blank">Chính sách bảo mật của Google</a>.
                 </p>
 
-                <h2>5. Kết nối Internet</h2>
+                <h2>7. Kết nối Internet</h2>
                 <p>
-                    Ứng dụng không yêu cầu kết nối internet để chơi game. Kết nối internet chỉ cần thiết để tải và hiển thị quảng cáo từ Google AdMob.
+                    Bạn có thể chơi game hoàn toàn ngoại tuyến mà không cần kết nối internet. Kết nối internet chỉ cần thiết cho các tính năng trực tuyến tùy chọn: hiển thị quảng cáo (Google AdMob) và bảng xếp hạng toàn cầu (mục 3).
                 </p>
 
-                <h2>6. Quyền riêng tư trẻ em</h2>
+                <h2>8. Quyền riêng tư trẻ em</h2>
                 <p>
-                    Ứng dụng không cố ý thu thập dữ liệu từ trẻ em dưới 13 tuổi. Vì chúng tôi không thu thập bất kỳ dữ liệu cá nhân nào, nên không có dữ liệu trẻ em nào bị thu thập.
+                    Ứng dụng không cố ý thu thập dữ liệu định danh cá nhân từ trẻ em dưới 13 tuổi. Chúng tôi khuyến nghị không nhập tên thật hoặc thông tin cá nhân khi đặt tên hiển thị cho bảng xếp hạng.
                 </p>
 
-                <h2>7. Thay đổi chính sách</h2>
+                <h2>9. Thay đổi chính sách</h2>
                 <p>
                     Chúng tôi có thể cập nhật chính sách bảo mật này trong tương lai. Mọi thay đổi sẽ được đăng tải trên trang này với ngày cập nhật mới.
                 </p>
 
-                <h2>8. Liên hệ</h2>
-                <p>Nếu bạn có bất kỳ câu hỏi nào về chính sách bảo mật này, vui lòng liên hệ:</p>
+                <h2>10. Liên hệ</h2>
+                <p>Nếu bạn có bất kỳ câu hỏi nào về chính sách bảo mật này, hoặc muốn yêu cầu xóa dữ liệu bảng xếp hạng của mình, vui lòng liên hệ:</p>
                 <div class="contact-box">
-                    <strong>DuongCoder04</strong><br>
-                    Email: <a href="mailto:duongcoder04@gmail.com">duongcoder04@gmail.com</a>
+                    <strong>ThePenguinLab</strong><br>
+                    Email: <a href="mailto:thepenguinlab.dev@gmail.com">thepenguinlab.dev@gmail.com</a>
                 </div>
             </div>
 
             <!-- English -->
+
+            
             <div id="lang-en" class="section">
                 <h1>Privacy Policy</h1>
-                <p class="subtitle">Block Game &mdash; DuongCoder04 | Last updated: March 13, 2026</p>
+                <p class="subtitle">TetriX Neon &mdash; ThePenguinLab | Last updated: July 16, 2026</p>
 
                 <h2>1. Introduction</h2>
                 <p>
-                    Block Game is a block-stacking puzzle game (Tetris clone) developed by DuongCoder04.
+                    TetriX Neon (formerly Block Game) is a block-stacking puzzle game (Tetris clone) developed by ThePenguinLab.
                     We respect your privacy and are committed to being transparent about how the app works.
                 </p>
 
                 <h2>2. Data We Collect</h2>
-                <p><strong>We do not collect any personal data from users.</strong></p>
+                <p>The app does not require account registration, email, or phone number. However, if you use the optional online features (global leaderboard), we collect the data described below.</p>
                 <ul>
-                    <li>No account registration or login is required.</li>
-                    <li>We do not collect your name, email, phone number, or any personal information.</li>
+                    <li>No account registration or login with email/phone is required.</li>
+                    <li>We do not collect your email, phone number, or personal contact information.</li>
                     <li>We do not track your location.</li>
+                    <li>We collect a <strong>display name</strong> you choose and your <strong>score</strong> if you opt in to the global leaderboard (see Section 3).</li>
+                    <li>We collect anonymous usage data (score, level, lines cleared, session duration, language) via Firebase Analytics (see Section 4).</li>
                 </ul>
 
-                <h2>3. Local Storage</h2>
+                <h2>3. Global Leaderboard</h2>
                 <p>
-                    The app uses <strong>SharedPreferences</strong> to save your high score locally on your device.
-                    This data is stored only on your device, is never sent anywhere, and is deleted when you uninstall the app.
+                    If you choose to set a display name and submit your score to the global leaderboard, the app sends the following to Cloud Firestore (Google Firebase):
+                </p>
+                <ul>
+                    <li>The <strong>display name</strong> you enter (max 20 characters) &mdash; this is shown publicly to other players on the leaderboard. Please do not use your real name or other identifying information.</li>
+                    <li>Your <strong>high score</strong>.</li>
+                    <li>An <strong>anonymous ID</strong> generated by Firebase Authentication to distinguish your entry from other players &mdash; this ID is not linked to your real name, email, or any other personal information.</li>
+                </ul>
+                <p>
+                    The leaderboard feature is <strong>optional</strong> &mdash; you can skip it and play entirely offline. You can change your display name at any time in the app.
+                    If you'd like to request deletion of your leaderboard data, please contact us at the email in Section 10.
                 </p>
 
-                <h2>4. Advertising (Google AdMob)</h2>
+                <h2>4. Firebase Analytics</h2>
+                <p>
+                    The app uses Firebase Analytics to collect anonymous usage data to help us improve the game experience, such as: score, level reached, lines cleared, session duration, current screen, and selected language. This data does not include your name, email, or any personally identifying information. Learn more at:
+                    <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.
+                </p>
+
+                <h2>5. Local Storage</h2>
+                <p>
+                    The app uses <strong>SharedPreferences</strong> to save your high score, coin balance, quest progress, and daily streak locally on your device.
+                    This data is stored only on your device and is never sent anywhere (except the leaderboard data in Section 3, if you opt in), and is deleted when you uninstall the app.
+                </p>
+
+                <h2>6. Advertising (Google AdMob)</h2>
                 <p>
                     The app uses <strong>Google AdMob</strong> to display advertisements. Google AdMob may collect certain device information for the purpose of serving relevant ads, including:
                 </p>
@@ -236,31 +282,31 @@
                     <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.
                 </p>
 
-                <h2>5. Internet Connection</h2>
+                <h2>7. Internet Connection</h2>
                 <p>
-                    The app does not require an internet connection to play the game. An internet connection is only needed to load and display ads from Google AdMob.
+                    You can play the game entirely offline without an internet connection. An internet connection is only needed for the optional online features: displaying ads (Google AdMob) and the global leaderboard (Section 3).
                 </p>
 
-                <h2>6. Children's Privacy</h2>
+                <h2>8. Children's Privacy</h2>
                 <p>
-                    The app does not knowingly collect data from children under 13. Since we do not collect any personal data, no children's data is collected.
+                    The app does not knowingly collect personally identifying data from children under 13. We recommend not entering your real name or personal information as your leaderboard display name.
                 </p>
 
-                <h2>7. Changes to This Policy</h2>
+                <h2>9. Changes to This Policy</h2>
                 <p>
                     We may update this privacy policy in the future. Any changes will be posted on this page with a new update date.
                 </p>
 
-                <h2>8. Contact Us</h2>
-                <p>If you have any questions about this privacy policy, please contact:</p>
+                <h2>10. Contact Us</h2>
+                <p>If you have any questions about this privacy policy, or would like to request deletion of your leaderboard data, please contact:</p>
                 <div class="contact-box">
-                    <strong>DuongCoder04</strong><br>
-                    Email: <a href="mailto:duongcoder04@gmail.com">duongcoder04@gmail.com</a>
+                    <strong>ThePenguinLab</strong><br>
+                    Email: <a href="mailto:thepenguinlab.dev@gmail.com">thepenguinlab.dev@gmail.com</a>
                 </div>
             </div>
         </div>
 
-        <p class="footer-note">&copy; 2026 DuongCoder04. Block Game.</p>
+        <p class="footer-note">&copy; 2026 ThePenguinLab. TetriX Neon.</p>
     </div>
 
     <script>
